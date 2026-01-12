@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "ac1e5331-06be-4387-b94b-c092afd3d9a8",
+		"name": "accounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user register",
+			"id": "d35a5ede-914b-4abe-aba3-eff62a27c3c4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"1234567890\",\r\n    \"password\":\"1234567890\",\r\n    \"first_name\":\"siddharth\",\r\n    \"last_name\":\"maurya\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/accounts/user/register/"
+			},
+			"response": [
+				{
+					"id": "a3bf33cc-cdae-46a4-a620-b3580af330dc",
+					"name": "user register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"1234567890\",\r\n    \"password\":\"1234567890\",\r\n    \"first_name\":\"siddharth\",\r\n    \"last_name\":\"maurya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/accounts/user/register/"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Jan 2026 09:27:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "131"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"message\": \"User registered successfully\",\n    \"user\": {\n        \"phone\": \"1234567890\",\n        \"email\": null,\n        \"first_name\": \"siddharth\",\n        \"last_name\": \"maurya\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "user login",
+			"id": "1d09cce1-6b2b-4835-8605-e4f2915baf7e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"1234567890\",\r\n    \"password\":\"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/accounts/user/login/"
+			},
+			"response": [
+				{
+					"id": "b5111aa4-9e6e-4965-a05a-89125f9bb3bf",
+					"name": "user login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"1234567890\",\r\n    \"password\":\"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/accounts/user/login/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Jan 2026 09:29:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "542"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"message\": \"Login successful\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MTI3MzQ3LCJpYXQiOjE3NjgxMjM3NDcsImp0aSI6IjhmOTA5Yzk2MWRjZTQ4YTk4NDgyY2YxZTc2MzM4ZWM1IiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAifQ.rxOxqW0NZwQaU64bH0r5cDFlod9gMWUPyRXrJ7gN_94\",\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2ODIxMDE0NywiaWF0IjoxNzY4MTIzNzQ3LCJqdGkiOiI3YjlmYTdjOTk1OTU0OGNiYTNjMzVlZjMxYzFlMmU2NiIsInVzZXJfaWQiOiIxMjM0NTY3ODkwIn0.6jI0_YZbyHftndJ6fOC0fHwI0Kkzn6INQX-76DMGZHc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "user profile",
+			"id": "9de273d5-9026-4390-9d4a-98d0efd9e92b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MTQwMjMwLCJpYXQiOjE3NjgxMzY2MzAsImp0aSI6IjI4ZGYwNmYwNWU2YTQxZmE4NjI1NDdjMmIxMjI5NzA1IiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAifQ.3cNv2hsU7xgyWs30yxUIZb8mK3rhyEbyMUInhjuQ_wA"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"sid\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/accounts/me/"
+			},
+			"response": [
+				{
+					"id": "f6048800-1613-4ee3-810f-c667c8b8e336",
+					"name": "user profile",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"sid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/accounts/me/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Jan 2026 13:08:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"message\": \"Profile updated successfully\"\n}"
+				}
+			]
+		}
+	]
+}
