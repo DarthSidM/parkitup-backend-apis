@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "3124aac4-3c65-4b08-b77b-bba0f3301952",
+		"name": "admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37330377",
+		"_collection_link": "https://brotherhood-of-silent-sorrows.postman.co/workspace/parkitup~9e47f6f3-2ccc-4dc2-9e2d-e99b84268f47/collection/37330377-3124aac4-3c65-4b08-b77b-bba0f3301952?action=share&source=collection_link&creator=37330377"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"9870172547\",\r\n    \"password\":\"9870172547\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/accounts/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accounts",
+						"token",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"9870172547\",\r\n    \"password\":\"9870172547\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/accounts/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"token",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 09:58:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "513"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2ODI5ODMzMywiaWF0IjoxNzY4MjExOTMzLCJqdGkiOiI4MTBiMTQwMzI1OTk0ZmRmOTJjMmE2YTNiNGFkMTEyOSIsInVzZXJfaWQiOiI5ODcwMTcyNTQ3In0.kLKDLoA8H2FKUw17SH02uHVIBHxR-5ueIpVpg0j6faA\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjE1NTMzLCJpYXQiOjE3NjgyMTE5MzMsImp0aSI6IjRmMWVmMDc5MjgxODQyMjhhMDBkMjRmODg5NDg5NGI2IiwidXNlcl9pZCI6Ijk4NzAxNzI1NDcifQ.ie0P6GzWPUMzupheOtZ9X6MC2n8w0CcImJTYTwfEmT0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create attendant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjE1ODE1LCJpYXQiOjE3NjgyMTIyMTUsImp0aSI6IjJhYTE3MTRkNWU5MDRlNzJhZjBlNGY1NTNjZWU0ZDhkIiwidXNlcl9pZCI6Ijk4NzAxNzI1NDcifQ.fQpgJb12ZPQBCju05eXreNrdFIzc5ZHmBOlqQnLzk-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"1234567891\",\r\n    \"password\":\"1234567890\",\r\n    \"first_name\":\"siddharth\",\r\n    \"last_name\":\"maurya\",\r\n    \"assigned_location\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/accounts/attendant/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accounts",
+						"attendant",
+						"create",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create attendant",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"1234567891\",\r\n    \"password\":\"1234567890\",\r\n    \"first_name\":\"siddharth\",\r\n    \"last_name\":\"maurya\",\r\n    \"assigned_location\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/accounts/attendant/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"attendant",
+								"create",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 10:05:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Attendant created successfully\",\n    \"attendant\": {\n        \"phone\": \"1234567891\",\n        \"first_name\": \"siddharth\",\n        \"last_name\": \"maurya\",\n        \"assigned_location\": 1,\n        \"is_active\": true\n    }\n}"
+				}
+			]
+		}
+	]
+}
