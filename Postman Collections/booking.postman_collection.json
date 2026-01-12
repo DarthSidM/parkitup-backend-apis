@@ -1,0 +1,1029 @@
+{
+	"info": {
+		"_postman_id": "152a7c7d-e895-49d7-8f1c-338b8d4fdd65",
+		"name": "booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37330377",
+		"_collection_link": "https://brotherhood-of-silent-sorrows.postman.co/workspace/parkitup~9e47f6f3-2ccc-4dc2-9e2d-e99b84268f47/collection/37330377-152a7c7d-e895-49d7-8f1c-338b8d4fdd65?action=share&source=collection_link&creator=37330377"
+	},
+	"item": [
+		{
+			"name": "create booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjM3NDYxLCJpYXQiOjE3NjgyMzM4NjEsImp0aSI6Ijc3MzM3MjAwZTZlZDQ4OTFiMWViMWZmOGQxNmZlYzlmIiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAiLCJ0eXBlIjoidXNlciIsInBob25lIjoiMTIzNDU2Nzg5MCJ9.ncUfFLUF0dWmOwf5o1lNGy0II_aZec8oSItlmjfYLjo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location_id\":1,\r\n    \"vehicle_id\":1,\r\n    \"start_time\":\"2026-01-12T22:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"create",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create booking",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location_id\":1,\r\n    \"vehicle_id\":2,\r\n    \"start_time\":\"2026-01-12T19:30:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"create",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 14:01:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"start_time\": \"2026-01-12T19:30:00Z\",\n    \"vehicle_id\": 2,\n    \"location_id\": 1,\n    \"slot_id\": 12\n}"
+				}
+			]
+		},
+		{
+			"name": "my-bookings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjM1MDg0LCJpYXQiOjE3NjgyMzE0ODQsImp0aSI6IjE1NDY0MTAxMzFkNTQxYWZhZDI1NzA0NWU0MWZiOTcxIiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAiLCJ0eXBlIjoidXNlciIsInBob25lIjoiMTIzNDU2Nzg5MCJ9.X9A7eaU2ZEEArCiUcy-zvqd2pkCiSxkKXdApDyq3Myo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location_id\":1,\r\n    \"vehicle_id\":2,\r\n    \"start_time\":\"2026-01-12T19:30:00Z\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/my-bookings/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"my-bookings",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "my-bookings",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location_id\":1,\r\n    \"vehicle_id\":2,\r\n    \"start_time\":\"2026-01-12T19:30:00Z\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/my-bookings/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"my-bookings",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 14:05:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "465"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"start_time\": \"2026-01-12T19:30:00Z\",\n        \"exit_time\": null,\n        \"fare\": null,\n        \"status\": \"ACTIVE\",\n        \"location_name\": \"DTU parking\",\n        \"vehicle_plate\": \"DL54321\",\n        \"slot_number\": 2,\n        \"slot_status\": \"reserved\",\n        \"zone_name\": \"zone a\",\n        \"hourly_rate\": \"20.00\"\n    },\n    {\n        \"id\": 1,\n        \"start_time\": \"2026-01-12T19:30:00Z\",\n        \"exit_time\": null,\n        \"fare\": null,\n        \"status\": \"ACTIVE\",\n        \"location_name\": \"DTU parking\",\n        \"vehicle_plate\": \"DL12345\",\n        \"slot_number\": 1,\n        \"slot_status\": \"reserved\",\n        \"zone_name\": \"zone a\",\n        \"hourly_rate\": \"20.00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "my-active-bookings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjI5MDU2LCJpYXQiOjE3NjgyMjU0NTYsImp0aSI6ImU4MGM2NTY3NzFlZTQxOWQ5YTlmNzlmMzRmMzUxZjY2IiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAifQ.ZkEHNGd420VkZz6umGqqc7-UbI3HeaFydwo_M0vi5ZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location_id\":1,\r\n    \"vehicle_id\":1,\r\n    \"start_time\":\"2026-01-12T19:30:00Z\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/my-active-booking/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"my-active-booking",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "my-active-bookings",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location_id\":1,\r\n    \"vehicle_id\":1,\r\n    \"start_time\":\"2026-01-12T19:30:00Z\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/my-active-booking/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"my-active-booking",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 14:09:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "465"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"start_time\": \"2026-01-12T19:30:00Z\",\n        \"exit_time\": null,\n        \"fare\": null,\n        \"status\": \"ACTIVE\",\n        \"location_name\": \"DTU parking\",\n        \"vehicle_plate\": \"DL12345\",\n        \"slot_number\": 1,\n        \"slot_status\": \"reserved\",\n        \"zone_name\": \"zone a\",\n        \"hourly_rate\": \"20.00\"\n    },\n    {\n        \"id\": 2,\n        \"start_time\": \"2026-01-12T19:30:00Z\",\n        \"exit_time\": null,\n        \"fare\": null,\n        \"status\": \"ACTIVE\",\n        \"location_name\": \"DTU parking\",\n        \"vehicle_plate\": \"DL54321\",\n        \"slot_number\": 2,\n        \"slot_status\": \"reserved\",\n        \"zone_name\": \"zone a\",\n        \"hourly_rate\": \"20.00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get a specific booking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjI5MDU2LCJpYXQiOjE3NjgyMjU0NTYsImp0aSI6ImU4MGM2NTY3NzFlZTQxOWQ5YTlmNzlmMzRmMzUxZjY2IiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAifQ.ZkEHNGd420VkZz6umGqqc7-UbI3HeaFydwo_M0vi5ZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location_id\":1,\r\n    \"vehicle_id\":1,\r\n    \"start_time\":\"2026-01-12T19:30:00Z\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/my-bookings/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"my-bookings",
+						"2",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit a specific booking",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location_id\":1,\r\n    \"vehicle_id\":1,\r\n    \"start_time\":\"2026-01-12T19:30:00Z\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/my-bookings/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"my-bookings",
+								"2",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 14:11:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "231"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"start_time\": \"2026-01-12T19:30:00Z\",\n    \"exit_time\": null,\n    \"fare\": null,\n    \"status\": \"ACTIVE\",\n    \"location_name\": \"DTU parking\",\n    \"vehicle_plate\": \"DL54321\",\n    \"slot_number\": 2,\n    \"slot_status\": \"reserved\",\n    \"zone_name\": \"zone a\",\n    \"hourly_rate\": \"20.00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "verify arrival",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjM1MTUyLCJpYXQiOjE3NjgyMzE1NTIsImp0aSI6IjU5YTJlYjhhZjA1YjQwY2VhNGVkN2NhZTY1ODNiMmZkIiwidXNlcl9pZCI6IjEyMzQ1Njc4OTEiLCJ0eXBlIjoiYXR0ZW5kYW50IiwicGhvbmUiOiIxMjM0NTY3ODkxIn0.UARlSXAa5gKuUkdP1ifKDYe0YWSqa5mi7Iqyrx2JWYs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicle_plate\":\"DL54321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/verify-arrival/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"verify-arrival",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "verify arrival",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicle_plate\":\"DL54321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/verify-arrival/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"verify-arrival",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 15:28:37 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Arrival verified.\",\n    \"slot_number\": 2,\n    \"zone\": \"zone a\"\n}"
+				}
+			]
+		},
+		{
+			"name": "list bookings for a location",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjM1NTk4LCJpYXQiOjE3NjgyMzE5OTgsImp0aSI6IjdhMDM0OThhOWUxZjQwMGNiNzMwYTllOGZlMGE2ZmE3IiwidXNlcl9pZCI6IjEyMzQ1Njc4OTEiLCJ0eXBlIjoiYXR0ZW5kYW50IiwicGhvbmUiOiIxMjM0NTY3ODkxIn0.AlMT4LwZTAYBm2PQ-dWA3bTHGNon3cOarP18yXipBW0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/location/1/bookings/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"location",
+						"1",
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list bookings for a location",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/location/1/bookings/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"location",
+								"1",
+								"bookings",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 15:59:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "465"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"start_time\": \"2026-01-12T19:30:00Z\",\n        \"exit_time\": null,\n        \"fare\": null,\n        \"status\": \"ACTIVE\",\n        \"location_name\": \"DTU parking\",\n        \"vehicle_plate\": \"DL12345\",\n        \"slot_number\": 1,\n        \"slot_status\": \"occupied\",\n        \"zone_name\": \"zone a\",\n        \"hourly_rate\": \"20.00\"\n    },\n    {\n        \"id\": 2,\n        \"start_time\": \"2026-01-12T19:30:00Z\",\n        \"exit_time\": null,\n        \"fare\": null,\n        \"status\": \"ACTIVE\",\n        \"location_name\": \"DTU parking\",\n        \"vehicle_plate\": \"DL54321\",\n        \"slot_number\": 2,\n        \"slot_status\": \"occupied\",\n        \"zone_name\": \"zone a\",\n        \"hourly_rate\": \"20.00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "process exit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjM1NTk4LCJpYXQiOjE3NjgyMzE5OTgsImp0aSI6IjdhMDM0OThhOWUxZjQwMGNiNzMwYTllOGZlMGE2ZmE3IiwidXNlcl9pZCI6IjEyMzQ1Njc4OTEiLCJ0eXBlIjoiYXR0ZW5kYW50IiwicGhvbmUiOiIxMjM0NTY3ODkxIn0.AlMT4LwZTAYBm2PQ-dWA3bTHGNon3cOarP18yXipBW0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/2/process-exit/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"2",
+						"process-exit",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "process exit",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/1/process-exit/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"1",
+								"process-exit",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 16:01:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "70"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Exit processed successfully.\",\n    \"total_hours\": 1,\n    \"fare\": 20\n}"
+				}
+			]
+		},
+		{
+			"name": "cancel booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjM3NDYxLCJpYXQiOjE3NjgyMzM4NjEsImp0aSI6Ijc3MzM3MjAwZTZlZDQ4OTFiMWViMWZmOGQxNmZlYzlmIiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAiLCJ0eXBlIjoidXNlciIsInBob25lIjoiMTIzNDU2Nzg5MCJ9.ncUfFLUF0dWmOwf5o1lNGy0II_aZec8oSItlmjfYLjo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/3/cancel/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"3",
+						"cancel",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "cancel booking",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/2/cancel/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"2",
+								"cancel",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 16:04:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Cannot cancel booking; vehicle already checked in.\"\n}"
+				},
+				{
+					"name": "cancel booking",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/3/cancel/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"3",
+								"cancel",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 Jan 2026 16:05:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Booking cancelled successfully.\"\n}"
+				}
+			]
+		}
+	]
+}
