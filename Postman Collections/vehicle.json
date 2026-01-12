@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "ac652fde-6b76-48f8-9e98-e7d10800f3a9",
+		"name": "vehicle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list/create vehicle",
+			"id": "7075e27f-d004-4657-a0c2-7a65ea91dd9a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MTQzMjg4LCJpYXQiOjE3NjgxMzk2ODgsImp0aSI6ImIxOTA3NjQ3OWE0MzQzZmRhN2MyNmEyY2EzYzUyYjA2IiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAifQ.cqOxtZLv2eB9nqbeSISRiZ2wh71EOd5wP8ALJPy8t-0"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicle_registration_number\":\"DL54321\",\r\n    \"vehicle_type\":\"suv\",\r\n    \"vehicle_name\":\"xuv500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/vehicle/"
+			},
+			"response": [
+				{
+					"id": "e7d06dd6-c8c0-4c5f-86ab-1610ec0e3b32",
+					"name": "list/create vehicle",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicle_registration_number\":\"DL54321\",\r\n    \"vehicle_type\":\"suv\",\r\n    \"vehicle_name\":\"xuv500\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/vehicle/2/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Jan 2026 13:57:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "101"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"vehicle_id\": 2,\n    \"vehicle_registration_number\": \"DL54321\",\n    \"vehicle_type\": \"suv\",\n    \"vehicle_name\": \"xuv500\"\n}"
+				},
+				{
+					"id": "5e02c650-d924-4ced-8ccd-12baafa0ec40",
+					"name": "list/create vehicle",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicle_registration_number\":\"DL54321\",\r\n    \"vehicle_type\":\"suv\",\r\n    \"vehicle_name\":\"xuv500\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/vehicle/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Jan 2026 14:01:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "205"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "[\n    {\n        \"vehicle_id\": 1,\n        \"vehicle_registration_number\": \"DL12345\",\n        \"vehicle_type\": \"suv\",\n        \"vehicle_name\": \"xuv600\"\n    },\n    {\n        \"vehicle_id\": 2,\n        \"vehicle_registration_number\": \"DL54321\",\n        \"vehicle_type\": \"suv\",\n        \"vehicle_name\": \"xuv500\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "retrieve/update/delete vehicle",
+			"id": "3a4e9a22-2ace-4131-868d-b272a460c6b0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MTQzMjg4LCJpYXQiOjE3NjgxMzk2ODgsImp0aSI6ImIxOTA3NjQ3OWE0MzQzZmRhN2MyNmEyY2EzYzUyYjA2IiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAifQ.cqOxtZLv2eB9nqbeSISRiZ2wh71EOd5wP8ALJPy8t-0"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicle_name\":\"xuv600\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/vehicle/1/"
+			},
+			"response": [
+				{
+					"id": "f1c76fdf-fb72-4259-b3c1-49e05dcb23f9",
+					"name": "retrieve/update/delete vehicle",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicle_name\":\"xuv600\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/vehicle/1/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Jan 2026 14:00:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "101"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"vehicle_id\": 1,\n    \"vehicle_registration_number\": \"DL12345\",\n    \"vehicle_type\": \"suv\",\n    \"vehicle_name\": \"xuv600\"\n}"
+				}
+			]
+		},
+		{
+			"name": "upload vehicle image",
+			"id": "6f5b4121-5e51-4dd0-a230-f5284fcb4bed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MjAxMDkwLCJpYXQiOjE3NjgxOTc0OTAsImp0aSI6ImM1ZGMwOTNjZmYwYTQ3MThiZDVlOTI2YzE2YWRkOGEwIiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAifQ.CSm0QLzDugv0vP_LfShR4UzpNA2r_qdXQwlJQPPD2do"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"type": "file",
+							"uuid": "c724fa26-45de-4ca8-8efe-ecb50154f1b9",
+							"src": "/C:/Users/siddharth/Pictures/Screenshots/Screenshot 2025-10-26 133834.png"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"uuid": "a50530ed-3344-4253-97f4-99c07850e9b2",
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/vehicle/1/images/"
+			},
+			"response": [
+				{
+					"id": "8e240ec7-e72b-4d8c-9c83-4c702e570a2a",
+					"name": "upload vehicle image",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"uuid": "c724fa26-45de-4ca8-8efe-ecb50154f1b9",
+									"src": [
+										"/C:/Users/siddharth/Pictures/wallpapers/mountain.jpg",
+										"/C:/Users/siddharth/Pictures/wallpapers/robot.jpg"
+									]
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"uuid": "a50530ed-3344-4253-97f4-99c07850e9b2",
+									"disabled": true
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/vehicle/1/images/"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Jan 2026 14:06:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "411"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"message\": \"Vehicle images uploaded successfully\",\n    \"data\": [\n        {\n            \"picture_id\": 2,\n            \"vehicle\": 1,\n            \"picture_link\": \"https://res.cloudinary.com/dc8aziokb/image/upload/v1768140383/vehicle_pictures/user_1234567890/vehicle_1/fhblkby1fgriinnd3wjs.jpg\"\n        },\n        {\n            \"picture_id\": 3,\n            \"vehicle\": 1,\n            \"picture_link\": \"https://res.cloudinary.com/dc8aziokb/image/upload/v1768140390/vehicle_pictures/user_1234567890/vehicle_1/orpxcmaty8nzpuggfwut.jpg\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "delete vehicle image",
+			"id": "543648b3-b879-4e39-86e9-41bcf5d7e0be",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MTQzMjg4LCJpYXQiOjE3NjgxMzk2ODgsImp0aSI6ImIxOTA3NjQ3OWE0MzQzZmRhN2MyNmEyY2EzYzUyYjA2IiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAifQ.cqOxtZLv2eB9nqbeSISRiZ2wh71EOd5wP8ALJPy8t-0"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"type": "file",
+							"uuid": "c724fa26-45de-4ca8-8efe-ecb50154f1b9",
+							"src": [
+								"/C:/Users/siddharth/Pictures/wallpapers/mountain.jpg",
+								"/C:/Users/siddharth/Pictures/wallpapers/robot.jpg"
+							]
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"uuid": "a50530ed-3344-4253-97f4-99c07850e9b2",
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/vehicle/images/3/"
+			},
+			"response": [
+				{
+					"id": "c6959306-201f-49f0-921f-5682aed903ee",
+					"name": "delete vehicle image",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"uuid": "c724fa26-45de-4ca8-8efe-ecb50154f1b9",
+									"src": [
+										"/C:/Users/siddharth/Pictures/wallpapers/mountain.jpg",
+										"/C:/Users/siddharth/Pictures/wallpapers/robot.jpg"
+									]
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"uuid": "a50530ed-3344-4253-97f4-99c07850e9b2",
+									"disabled": true
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/vehicle/images/3/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Jan 2026 14:09:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"message\": \"Vehicle image deleted successfully\"\n}"
+				}
+			]
+		}
+	]
+}
