@@ -1075,6 +1075,67 @@
 					"cookie": [],
 					"responseTime": null,
 					"body": "{\n    \"zone_id\": 1,\n    \"zone_name\": \"zone a\",\n    \"description\": \"near gate\",\n    \"total_slots\": 0,\n    \"available_slots\": 0,\n    \"reserved_slots\": 0,\n    \"occupied_slots\": 0,\n    \"slots\": []\n}"
+				},
+				{
+					"id": "ead45bbe-371c-4c96-886f-842a64d4907d",
+					"name": "get slots by zone",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://api.parkitup.co.in/api/parking/zones/1/slots/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Jan 2026 17:41:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"zone_id\": 1,\n    \"zone_name\": \"Zone A\",\n    \"description\": \"Near Gate\",\n    \"total_slots\": 10,\n    \"available_slots\": 10,\n    \"reserved_slots\": 0,\n    \"occupied_slots\": 0,\n    \"slots\": [\n        {\n            \"id\": 11,\n            \"number\": 1,\n            \"status\": \"free\"\n        },\n        {\n            \"id\": 12,\n            \"number\": 2,\n            \"status\": \"free\"\n        },\n        {\n            \"id\": 13,\n            \"number\": 3,\n            \"status\": \"free\"\n        },\n        {\n            \"id\": 14,\n            \"number\": 4,\n            \"status\": \"free\"\n        },\n        {\n            \"id\": 15,\n            \"number\": 5,\n            \"status\": \"free\"\n        },\n        {\n            \"id\": 16,\n            \"number\": 6,\n            \"status\": \"free\"\n        },\n        {\n            \"id\": 17,\n            \"number\": 7,\n            \"status\": \"free\"\n        },\n        {\n            \"id\": 18,\n            \"number\": 8,\n            \"status\": \"free\"\n        },\n        {\n            \"id\": 19,\n            \"number\": 9,\n            \"status\": \"free\"\n        },\n        {\n            \"id\": 20,\n            \"number\": 10,\n            \"status\": \"free\"\n        }\n    ]\n}"
 				}
 			]
 		},
