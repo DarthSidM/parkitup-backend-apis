@@ -157,7 +157,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"name\": \"G2S parking\",\r\n  \"address\": \"rohini\",\r\n  \"location\": {\r\n    \"type\": \"Point\",\r\n    \"coordinates\": [77.114034, 28.734513] //lng, lat\r\n  },\r\n  \"hourly_rate\": \"50\"\r\n}\r\n",
+					"raw": "{\r\n  \"name\": \"DTU parking\",\r\n  \"address\": \"shabad daulatput\",\r\n  \"location\": {\r\n    \"type\": \"Point\",\r\n    \"coordinates\": [77.114070, 28.751566] //lng, lat\r\n  },\r\n  \"hourly_rate\": \"20\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -660,18 +660,18 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"zone c\",\r\n    \"description\":\"near sports complex\",\r\n    \"parking_location\":1\r\n}",
+					"raw": "{\r\n    \"name\":\"zone b\",\r\n    \"description\":\"near science complex\",\r\n    \"parking_location\":2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://127.0.0.1:8000/api/parking/locations/1/zones/"
+				"url": "http://127.0.0.1:8000/api/parking/locations/2/zones/"
 			},
 			"response": [
 				{
@@ -1150,14 +1150,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"count\":\"5\",\r\n    \"start\":1\r\n}",
+					"raw": "{\r\n    \"count\":\"10\",\r\n    \"start\":1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://127.0.0.1:8000/api/parking/zones/3/slots/bulk-create/"
+				"url": "http://127.0.0.1:8000/api/parking/zones/2/slots/bulk-create/"
 			},
 			"response": [
 				{
