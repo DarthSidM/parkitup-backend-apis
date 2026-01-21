@@ -112,7 +112,7 @@
 						}
 					}
 				},
-				"url": "http://127.0.0.1:8000/api/accounts/user/login/"
+				"url": "https://api.parkitup.co.in/api/accounts/user/login/"
 			},
 			"response": [
 				{
