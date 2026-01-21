@@ -15,10 +15,10 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4MTQzMjg4LCJpYXQiOjE3NjgxMzk2ODgsImp0aSI6ImIxOTA3NjQ3OWE0MzQzZmRhN2MyNmEyY2EzYzUyYjA2IiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAifQ.cqOxtZLv2eB9nqbeSISRiZ2wh71EOd5wP8ALJPy8t-0"
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY5MDE5MTgzLCJpYXQiOjE3NjkwMTU1ODMsImp0aSI6ImFiYzA3ZjEwMDEzYjQ5ZmJiNTI3YzY1MWRmZjFlYzdiIiwidXNlcl9pZCI6IjEyMzQ1Njc4OTAiLCJ0eXBlIjoidXNlciIsInBob25lIjoiMTIzNDU2Nzg5MCJ9.FxbET4S4xnBDAceLGXTqKaAIbBTJ-DLewx4z_ki3tOQ"
 					}
 				},
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
